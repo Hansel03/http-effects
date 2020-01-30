@@ -20,7 +20,7 @@
 
 <div class="card-columns" *ngIf="!loading">
     <div class="card" *ngFor="let usuario of usuarios">
-        <img [src]="usuario.avatar" class="card-img-top">
+        <img [src]="usuario.avatar" class="card-img-top" [routerLink]="['/usuario/'+usuario.id]">
         <div class="card-body">
             <h5 class="card-title">{{usuario.first_name}} {{usuario.last_name}}</h5>
             <p class="card-text">{{usuario.email}}</p>
