@@ -23,7 +23,8 @@ export function usuariosReducer(
     case fromUsuarios.CARGAR_USUARIO:
       return {
         ...state,
-        loading: true
+        loading: true,
+        error: null
       };
 
     case fromUsuarios.CARGAR_USUARIO_SUCCESS:
