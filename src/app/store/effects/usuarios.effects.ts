@@ -15,7 +15,7 @@ export class UsuariosEffects {
   ) {}
 
   cargarUsuarios$ = createEffect(() =>
-    this.actions$.pipe(ofType(usuariosActions.CARGAR_USUARIO)).pipe(
+    this.actions$.pipe(ofType(usuariosActions.CARGAR_USUARIOS)).pipe(
       switchMap(() => {
         return this.usuarioService.getUsers().pipe(
           map(users => new usuariosActions.CargarUsuariosSuccess(users)),
